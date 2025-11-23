@@ -1,4 +1,4 @@
-# 🎬 Streamcrate
+#<img width="807" height="309" alt="logo(2)" src="https://github.com/user-attachments/assets/86a1e996-1243-46f6-b502-6458d706e6d4" />
 
 Streamcrate is a simple, lightweight platform that redirects users to various free legal streaming services.  
 No accounts, no clutter — just a clean hub to find where to watch.
