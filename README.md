@@ -22,3 +22,7 @@ No accounts, no clutter — just a clean hub to find where to watch.
 | HTML      | Structure |
 | CSS       | Styling |
 | JavaScript | Basic interactions |
+
+
+Live Delpoyment Link
+👉 https://streamcrate.netlify.app/
