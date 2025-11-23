@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero img {
+  width: 500px;
+  height: 200px;
+}
+
+.tagline {
+  color: #fc8619;
+  z-index: 3;
+}
+
+marquee {
+  margin-top: 15px;
+  background-color: #0d0d0d;
+  color: white;
+  font-weight: bolder;
+}
+
+/* ---------- Global Styles ---------- */
+body {
+  background: #0d0d0d;
+  /* Dark background */
+  color: #e0e0e0;
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo {
+  margin-bottom: -55px;
+}
+
+/* ---------- Header ---------- */
+header {
+  height: 175px;
+  margin-top: -53px;
+  width: 100%;
+  background: linear-gradient(1deg, #0a0a0a, #1e1e3f);
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  text-align: center;
+  background: linear-gradient(180deg, #0a0a0a, #1e1e3f);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1em;
+  border-top: 3px solid #b71c1c;
+}
+
+/* ---------- Main Section ---------- */
+main {
+  padding: 35px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 per row */
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #1c1c1c;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(183, 28, 28, 0.6);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #ef5350;
+}
+
+.card-content p {
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.card-content a {
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #b71c1c;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.card-content a:hover {
+  background: #ff5252;
+  box-shadow: 0 0 8px rgba(239, 83, 80, 0.6);
+}
+
+/* ---------- Modal ---------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+/* Show when targeted */
+.modal:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 95%;
+  background: #121212;
+  color: #e0e0e0;
+  box-shadow: 0 -5px 25px rgba(255, 0, 0, 0.3);
+  border-radius: 20px 20px 0 0;
+  padding: 40px 30px;
+  transition: bottom 0.5s ease;
+}
+
+.modal:target .modal-content {
+  bottom: 0;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff5252;
+}
+
+.modal-content h2 {
+  margin-top: 20px;
+  color: #ef5350;
+}
+
+.modal-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 1000px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1388px) {
+  header {
+  height: 205px;
+}
+
+.tagline {
+  font-size: 2em;
+}
+marquee {
+  margin-top: 50px;
+}
+marquee p{
+  font-size: 1.5em;
+} 
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+main {
+  margin-right: 300px;
+  padding: 130px;
+}
+.card{
+height: 370px;
+  width: 300px;
+}
+.card-grid {
+  gap: 90px;
+}
+}
+
+@media screen and (min-width: 1700px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 per row */
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+ body {
+    display: inherit;
+    position: relative;
+    width: 500px;
+  }
+
+  header {
+    font-size: 1em;
+    width: 100%;
+    height: auto;
+  }
+  header img{
+
+    height: 10px;
+    width: 100px;
+  }
+.modal-content {
+height: 140px;
+  width: 80%;
+ 
+}
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    border-radius: 15px 15px 0 0;
+    padding: 20px 20px;
+  }
+}
+
+
+/* ---------- BUTTONS ---------- */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.button-container button {
+  background: rgb(175 7 19);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-container button:hover {
+  background: #b81b1b;
+  transform: scale(1.07);
+  box-shadow: 0 0 15px rgba(214, 114, 114, 0.6);
+}
+
+/* For Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    /* Dark color for the thumb */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+    /* Dark color for the track */
+}
