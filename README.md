@@ -6,11 +6,11 @@ No accounts, no clutter — just a clean hub to find where to watch.
 ---
 
 ## 🚀 Features
--🎨 Clean UI made with pure HTML + CSS
--🔗 Redirects to multiple free streaming platforms
--💡 Zero backend, no frameworks required
--✅ Fast, lightweight static website
--📱 Fully responsive (mobile, tablet, desktop)
+- Minimalist UI
+- One-click redirect to streaming platforms
+- No backend needed
+- Fast and mobile-friendly
+- Responsive
 ---
 
 ## 🛠️ Tech Stack
